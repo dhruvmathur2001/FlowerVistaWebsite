@@ -1,0 +1,308 @@
+
+body{
+  background-image: url("./assets/Images/background/b6.jpg");
+  background-size: cover;
+}
+
+.nav-size{
+  font-size: 1.1rem;
+}
+
+.nav-bg{
+  background-color: #513077;  
+}
+
+.about-p{
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (min-width: 768px) {
+  .about-p {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+.about-info-heading{
+  font-family:cursive;
+  font-size: 3rem;
+}
+
+.about-info-body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  text-align: justify;
+}
+.img-sty{
+  height : 300px;
+  width : 700px;
+}
+.searchbar{
+  width: 28rem;
+}
+.sh{
+  font-size: 1.12rem;
+}
+.navbt{
+  border-top: 1px solid rgb(171, 167, 167);
+}
+
+.icon-large {
+  font-size: 1.6rem;
+}
+.bg-col{
+  background-color: #313d2a;
+}
+.brandtext {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+.link-hover:hover{
+  background-color: yellow !important;
+  color: black !important;
+  border: 2px solid black !important;
+  transform: scale(1.1);
+  
+}
+.bt{
+  border-top: 1px solid #d3c8c8;
+}
+a{
+  text-decoration: none;
+}
+
+.log-color{
+  background-color: cyan;
+  color: yellow;
+}
+footer {
+  color: white;
+}
+
+.unit-left {
+  margin-left: 10px;
+}
+
+.footer-bg {
+  background-color: #341756;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+
+}
+
+h6 {
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+
+}
+
+.unit-body {
+  text-align: justify;
+}
+
+.about-bg{
+
+  background-image: url("./assets/Images/background/b3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.prod-bg{
+  background-image: url("./assets/Images/background/b5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-specs{
+  font-family:cursive;
+}
+.prod-p {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+.prod-heading{
+  font-family: NIB Light Italic, serif;
+  font-size: 3rem;
+  text-align: center;
+  font-style: italic;
+}
+.card-img-top {
+  height: 350px;
+  /* Reduced height */
+  object-fit: cover;
+}
+
+.card {
+  max-width: 300px;
+  /* Limit the maximum width of the card */
+  margin: 0 auto;
+  /* Center the card */
+  min-height: max-content;
+}
+
+.card-spec{
+  font-size: 1.1rem;
+}
+
+.card-spec span{
+  font-size: 0.7rem;
+}
+
+.card-desc{
+  text-align: justify;
+  font-size: 0.9rem;
+  font-family: cursive;
+}
+
+.prod-p .row {
+  justify-content: center;
+  /* Center the cards horizontally */
+}
+
+.card-hover:hover{
+  transform: scale(1.05);
+}
+.card-bg-color{
+  background-color: yellow;
+}
+
+
+
+
+/* Reviews */
+
+#REVIEWS {
+  /* background-color: rgb(99, 153, 153); */
+  background-image: url("./assets/Images/background/b2.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#REVIEWS h1 {
+  font-family: NIB Light Italic, serif;
+  font-size: 3rem;
+  text-align: center;
+  font-style: italic;
+  color: yellow;
+}
+.rev-img{
+  height: 40px;
+  width: 400px;
+}
+.review-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-box {
+    width: 100%;
+    justify-content: center;
+    /* Center the single review box */
+  }
+
+  .reviews {
+    width: 100%;
+    margin: 0;
+    /* Remove side margins */
+  }
+
+}
+
+.review-box {
+  display: flex;
+  overflow-x: hidden;
+  /* Hide the horizontal scrollbar */
+  
+  width: 100%;
+  /* Adjust width as needed */
+  padding-bottom: 20px;
+  /* Add padding if necessary */
+
+}
+
+
+
+.reviews {
+  min-width: 32%;
+  margin: 10px;
+  padding: 20px;
+  padding-bottom: 5px;
+  background-color: #3c3544;
+  border-radius: 5px;
+  color: white;
+}
+
+.reviews p {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.review_rating {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.rev_img img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1.3rem;
+}
+
+.ratings {
+  margin-top: 4px;
+}
+
+.scroll-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.scroll-button.left {
+  position: absolute;
+  left: 0;
+}
+
+.scroll-button.right {
+  position: absolute;
+  right: 0;
+}
+
+.checked {
+  color: orange;
+}
+
+
+.carousel-item img {
+  height: 610px;
+  /* Adjust this value to set the desired height */
+  object-fit: cover;
+  /* This will ensure the image covers the area without distortion */
+}
+
+
+/* LOGIN */
+.input-specs{
+  width: 300px;
+}
+

@@ -39,6 +39,7 @@ function SignUp() {
         user
       ); 
       console.log(response.data); 
+      alert("User added Successfully")
       navigate('/login');
     } catch (error) {
       console.error(error);

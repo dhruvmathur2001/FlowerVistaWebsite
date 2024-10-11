@@ -20,7 +20,7 @@ function Login() {
         </a>
       </div>
       <div className="container-fluid my-5 d-flex justify-content-center">
-        <div className="formcontainer px-4 py-4 border border-dark">
+        <div className="formcontainer px-4 py-4 border border-dark rounded">
           <h3 className="text-center my-3">Login</h3>
           <form>
             <div className="mb-3">

@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Products from './components/Products';
 import Orders from './components/Orders';
-import Customers from './components/Customers';
+import Users from './components/Users';
 
 import './App.css'
 
@@ -20,7 +20,7 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/customers" element={<Customers />} />
+            <Route path="/users" element={<Users />} />
           </Routes>
         </div>
       </div>

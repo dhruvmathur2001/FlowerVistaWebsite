@@ -7,12 +7,13 @@ import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Login from "./components/Login"; // Import your Login component
 import SignUp from "./components/SignUp";
+import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      
+      <AuthProvider>
       <Routes>
         <Route
           path="/"
@@ -37,6 +38,7 @@ function App() {
          <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer/>
+      </AuthProvider>
     </Router>
   );
 }

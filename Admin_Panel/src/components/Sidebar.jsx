@@ -1,30 +1,27 @@
 // src/components/Sidebar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {  AiFillDashboard, AiOutlineTable, AiOutlineShoppingCart, AiOutlineUser, AiOutlineStar } from 'react-icons/ai'; // Import icons
 
 const Sidebar = () => {
   // State to track the active link
   const [activeLink, setActiveLink] = useState('/dashboard'); // Set default to '/dashboard'
 
   return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-height" style={{ width: '280px' }}>
+    <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar-height" style={{ width: '230px' }}>
       <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <svg className="bi pe-none me-2" width="40" height="32">
-          <use xlinkHref="#bootstrap" />
-        </svg>
+      <AiOutlineUser size={40} className="me-2" />      
         <span className="fs-4">Admin-Panel</span>
       </a>
       <hr />
-      <ul className="nav nav-pills flex-column mb-auto">
+      <ul className="nav nav-pills flex-column mb-auto ">
         <li>
           <Link
             to="/dashboard"
             className={`nav-link text-white ${activeLink === '/dashboard' ? 'active' : ''}`}
-            onClick={() => setActiveLink('/dashboard')} // Update state on click
+            onClick={() => setActiveLink('/dashboard')}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#speedometer2" />
-            </svg>
+            <AiFillDashboard size={22} className="me-2" /> 
             Dashboard
           </Link>
         </li>
@@ -32,11 +29,9 @@ const Sidebar = () => {
           <Link
             to="/orders"
             className={`nav-link text-white ${activeLink === '/orders' ? 'active' : ''}`}
-            onClick={() => setActiveLink('/orders')} // Update state on click
+            onClick={() => setActiveLink('/orders')}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#table" />
-            </svg>
+            <AiOutlineShoppingCart size={24} className="me-2" /> 
             Orders
           </Link>
         </li>
@@ -44,35 +39,29 @@ const Sidebar = () => {
           <Link
             to="/products"
             className={`nav-link text-white ${activeLink === '/products' ? 'active' : ''}`}
-            onClick={() => setActiveLink('/products')} // Update state on click
+            onClick={() => setActiveLink('/products')}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#grid" />
-            </svg>
+            <AiOutlineTable size={24} className="me-2" /> 
             Products
           </Link>
         </li>
         <li>
           <Link
-            to="/customers"
-            className={`nav-link text-white ${activeLink === '/customers' ? 'active' : ''}`}
-            onClick={() => setActiveLink('/customers')} // Update state on click
+            to="/users"
+            className={`nav-link text-white ${activeLink === '/users' ? 'active' : ''}`}
+            onClick={() => setActiveLink('/users')}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#people-circle" />
-            </svg>
-            Customers
+            <AiOutlineUser size={23} className="me-2" /> 
+            Users
           </Link>
         </li>
         <li>
           <Link
             to="/reviews"
             className={`nav-link text-white ${activeLink === '/reviews' ? 'active' : ''}`}
-            onClick={() => setActiveLink('/reviews')} // Update state on click
+            onClick={() => setActiveLink('/reviews')}
           >
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#grid" />
-            </svg>
+            <AiOutlineStar size={22} className="me-2" /> 
             Reviews
           </Link>
         </li>

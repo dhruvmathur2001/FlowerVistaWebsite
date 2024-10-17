@@ -1,36 +1,30 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [Mail,setMail] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [token, setToken] = useState('');
+    const [user, setUser] = useState(null); // New user state
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedIn(true); // Set login state if token exists
-    }
-  }, []);
+    const handleLogin = (token) => {
+        setToken(token);
+        setIsLoggedIn(true);
+    };
 
-  const handleLogin = (token) => {
-    localStorage.setItem("token", token);
-    setIsLoggedIn(true);
-  };
+    const handleLogout = () => {
+        setToken('');
+        setIsLoggedIn(false);
+        setUser(null); // Reset user state on logout
+    };
 
-  const handleData = (email) =>{
-    setMail(email);
-  }
+    const handleData = (userData) => {
+        setUser(userData); // Store user details
+    };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLoggedIn(false);
-    setMail("");
-  };
-
-  return (
-    <AuthContext.Provider value={{ isLoggedIn, handleLogin, handleLogout, handleData ,Mail }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider value={{ isLoggedIn, handleLogin, handleLogout, handleData, user }}>
+            {children}
+        </AuthContext.Provider>
+    );
 };

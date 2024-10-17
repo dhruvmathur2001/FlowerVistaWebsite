@@ -1,0 +1,17 @@
+
+.profile-h {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+
+
+.sidebar {
+    width: 25%; /* Sidebar takes 25% of the width */
+    background-color: #f8f9fa;
+}
+
+.display-page {
+    flex-grow: 1; /* Takes up the remaining width */
+    background-color: #fff;
+    padding: 20px;
+}

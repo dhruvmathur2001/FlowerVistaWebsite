@@ -15,26 +15,28 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/users/login", {
-        emailid: email,
-        password: password,
-      });
+        const response = await axios.post("http://localhost:5000/api/users/login", {
+            emailid: email,
+            password: password,
+        });
 
-      const { data } = response;
+        const { data } = response;
 
-      if (response.status === 200) {
-        handleLogin(data.token);  // Use handleLogin to update the context state
-        console.log(email)
-        handleData(email);
-        console.log("Login successful!", data.message);
-        navigate("/");  // Redirect after login
-      }
+        console.log(data)
+
+        if (response.status === 200) {
+            handleLogin(data.token); // Update context state with the token
+            console.log(data.user);
+            handleData(data.user); // Store user details in context
+            console.log(data.message);
+            navigate("/"); // Redirect after login
+        }
     } catch (error) {
-      if (error.response) {
-        setError(error.response.data.message);
-      } else {
-        setError("An error occurred during login. Please try again.");
-      }
+        if (error.response) {
+            setError(error.response.data.message);
+        } else {
+            setError("An error occurred during login. Please try again.");
+        }
     }
   };
 

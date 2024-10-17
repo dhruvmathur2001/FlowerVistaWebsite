@@ -7,6 +7,7 @@ import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Login from "./components/Login"; // Import your Login component
 import SignUp from "./components/SignUp";
+import Profile from "./components/Profile";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
@@ -36,6 +37,7 @@ function App() {
           }
         />
          <Route path="/signup" element={<SignUp />} />
+         <Route path="/profile" element={<Profile/>} />
       </Routes>
       <Footer/>
       </AuthProvider>

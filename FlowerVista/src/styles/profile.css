@@ -5,11 +5,16 @@
 }
 
 
-.sidebar {
-    width: 25%; /* Sidebar takes 25% of the width */
-    background-color: #f8f9fa;
+.profile-height {
+   height: 680px;
 }
 
+.sidebar-width{
+    width: 300px;
+}
+.bg-sidebar{
+    background-color: #dbfbfc;
+}
 .display-page {
     flex-grow: 1; /* Takes up the remaining width */
     background-color: #fff;
